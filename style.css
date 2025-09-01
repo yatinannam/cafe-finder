@@ -1,0 +1,187 @@
+/* 🌸 Global Style */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fef8f5;
+  color: #4e342e;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #6d4c41, #4e342e);
+  color: #fff;
+  padding: 18.5px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3em;
+  letter-spacing: 1px;
+}
+
+#searchBox {
+  display: flex;
+  gap: 8px;
+}
+
+#searchBox input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 220px;
+  transition: all 0.3s;
+}
+
+#searchBox input:focus {
+  box-shadow: 0 0 8px #f6c453;
+}
+
+#searchBox button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #d89ca3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#searchBox button:hover {
+  background: #c46a74;
+  transform: scale(1.05);
+}
+
+#container {
+  display: flex;
+  flex: 1;
+  margin-top: 70px;
+}
+
+#map {
+  flex: 2;
+  height: calc(100vh - 70px);
+}
+
+#sidebar {
+  flex: 1;
+  background: #fffaf7;
+  border-left: 3px solid #f6c453;
+  padding: 20px 20px 20px 30px;
+  overflow-y: scroll;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+  max-height: calc(100vh - 70px);
+}
+
+#sidebar h2 {
+  font-family: 'Playfair Display', serif;
+  color: #6d4c41;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#cafeList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 🌟 Cafe Card */
+.cafe-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.cafe-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cafe-card:hover {
+  background: #fff0eb;
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15), 0 0 10px #f6c453;
+  border: 1px solid #f6c453;
+}
+
+.cafe-card h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #3e2723;
+}
+
+.cafe-card p {
+  margin: 4px 0;
+  font-size: 0.9em;
+  color: #6d4c41;
+}
+
+/* 🌸 Loading Pulse */
+#loading {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff8f0;
+  padding: 12px 22px;
+  border: 2px solid #f6c453;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  animation: pulse 1.5s infinite;
+  z-index: 2000;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.05); }
+}
+
+/* Custom Scrollbar */
+#sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background: #fffaf7;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background: #d89ca3;
+  border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background: #c46a74;
+}
+
+#logo {
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+#logo:hover {
+  text-shadow: 0 0 8px #f6c453, 0 0 15px #f6c453; /* soft coffee-golden glow */
+}

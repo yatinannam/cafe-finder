@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Cafe Finder ☕ </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="logo"> Cafe Finder ☕ </h1>
+    <div id="searchBox">
+      <input type="text" id="cityInput" placeholder="Search a city...">
+      <button id="searchBtn">Find</button>
+    </div>
+  </header>
+
+  <main id="container">
+    <div id="map"></div>
+    <aside id="sidebar">
+      <h2>✨ Cozy Cafes</h2>
+      <div id="cafeList"></div>
+    </aside>
+  </main>
+
+  <div id="loading">Finding Cafes... ☕✨</div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
